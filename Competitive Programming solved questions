@@ -1,0 +1,39 @@
+//Denominations 
+//How to solve the denomination coding problem for Indian Currency
+
+
+#include <iostream>
+
+using namespace std;
+
+void den(int num)
+{
+    int i,a[10];
+    
+    int arr[10]={2000,500,200,100,50,20,10,5,2,1};
+    
+    for(i=0;i<10;i++)
+    {
+       a[i]=num/arr[i];
+       num=num%arr[i];
+    }
+    
+    for(i=0;i<10;i++)
+    {
+        cout<<"denomination of "<<arr[i]<<"  : "<<a[i]<<endl;
+    }
+    
+}
+
+int main()
+{
+    // cout<<"Hello World";
+int num;
+
+cout<<"Enter the denomiation";
+cin>>num;
+
+den(num);
+
+    return 0;
+}
